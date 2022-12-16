@@ -10,8 +10,8 @@ const todoList = () => {
   const overdue = () => {
     // Write the date check condition here and return the array of overdue items accordingly.
     // FILL YOUR CODE HERE
-    let todayDate = new Date();
-    const today = formattedDate(todayDate);
+    let duedate = new Date();
+    const today = formattedDate(duedate);
     return all.filter((todo) => {
       return todo.dueDate < today;
     });
@@ -20,9 +20,11 @@ const todoList = () => {
   const dueToday = () => {
     // Write the date check condition here and return the array of todo items that are due today accordingly.
     // FILL YOUR CODE HERE
-    // ..
-    // ..
-    // ..
+    let todayDate = new Date();
+    const today = formattedDate(todayDate);
+    return all.filter((todo) => {
+      return todo.dueDate === today;
+    });
   };
 
   const dueLater = () => {
